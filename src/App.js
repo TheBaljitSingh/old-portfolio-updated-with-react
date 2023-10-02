@@ -1,36 +1,46 @@
-import { useEffect, useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 import { useDrag } from 'react-dnd';
+import './App.css';
 import Typed from "typed.js";
 import Friends from "./Friends";
 import { FaUser } from "react-icons/fa";
 import {FaLocationDot } from "react-icons/fa6";
 import {SiGooglechrome} from "react-icons/si";
 import {BsWordpress} from "react-icons/bs";
+import {MdEmail} from "react-icons/md";
+import HorizontalSlider from './HorizontalSlider';
+import Navbar from "./Navbar";
 
-import {MdEmail} from "react-icons/md"
 
 
 
 
 function App() {
 
-  // const { dragStart, dragStop, dragMove, dragging } = useDrag();
-  // const handleDrag = ({ scrollContainer }: scrollVisibilityApiType) => (
-  //   ev: React.MouseEvent
-  // ) =>
-  //   dragMove(ev, (posDiff) => {
-  //     if (scrollContainer.current) {
-  //       scrollContainer.current.scrollLeft += posDiff;
-  //     }
-  //   });
 
-  // const [selected, setSelected] = React.useState<string>("");
-  // const handleItemClick = (itemId: string) => () => {
-  //   if (dragging) {
-  //     return false;
-  //   }
-  //   setSelected(selected !== itemId ? itemId : "");
-  // };
+  // const [stickyDiv, setStickyDiv] = useState("");
+
+  // useEffect(()=>{
+
+  // window.addEventListener("scroll", sti)
+
+  //   return()=>{
+
+  //   };
+
+  // }, []);
+
+  const items = 
+    Friends.map((e) => (
+        
+      <FriendCard
+        key={e.key}
+        name={e.name}
+        image={e.image}
+        bio={e.bio}
+      />
+      
+  ));
 
   // new section start
   const el = useRef(null);
@@ -48,37 +58,37 @@ function App() {
     }
   }, [])
 
+  function FriendCard(props){
+    return(
+      
+        <div className="slider-content">
+            <div className=" ml-12 flex flex-row items-center justify-center hover:bg-indigo-700 bg-gray-900 w-[395px] h-[250px] rounded-lg  hover:cursor-pointer " >
+                <div className="hover:border-white  ease-in-out  ">
+                <img className="w-32  rounded-[50%] border-4 border-indigo-700 hover:border-white" src={props.image} alt="" />
+                <div className="mt-5 text-center ">
+                    <p className="mt-1 font-bold text-2xl text-white">{props.name}</p>
+                    <p className="mt-2 font-medium text-white">{props.bio}</p>
+
+                </div>
+
+                </div>
+            </div>
+        </div>
+    )
+}
+
+
   return (
     <div >
-      <div className=" min-h-screen max-h-screen w-full bg-[url('./images/banner.jpg')] bg-cover bg-center">
+      <div className=" min-h-screen max-h-screen w-full bg-[url('./images/banner.jpg')] bg-cover bg-center ">
         {/* leking ye white wala nahi hat raha hai isko hatana hai */}
 
-        <nav className="w-full h-14 flex justify-between mx-auto items-center px-4 md:px-4 fixed top-0 bg-black z-999">
+      <Navbar/>
 
 
-          <div className="text-4xl text-white font-bold md:mx-10 ">
-            thebaljit<span className="text-indigo-700">singh</span>
+        <div className=" ml-8 ">
 
-          </div>
-          {/* menu ka margin me dikkat aa rahi hai. isko sabse right me karna hai */}
-          <div className=" list-none md:flex md:p-4 md:ml-[300px]  text-white font-semibold text-xl hidden ">
-            <ul className="mx-[10px]"><a href="/#">About</a></ul>
-            <ul className="mx-[10px]"><a href="/#">Home</a></ul>
-            <ul className="mx-[10px]"><a href="/#">Services</a></ul>
-            <ul className="mx-[10px]"><a href="/#">Skills</a></ul>
-            <ul className="mx-[10px]"><a href="/#">Team</a></ul>
-            <ul className="mx-[10px]"><a href="/#">Contact</a></ul>
-          </div>
-          <div>
-            <button className="md:hidden text-4xl text-white flex "><a href="/#">&#8801;</a></button>
-
-          </div>
-        </nav>
-
-
-        <div className="md:ml-44 md:mt-48 ml-8 mt-44">
-
-          <div className=" flex-col text-slate-200 w-100 inline-block">
+          <div className=" flex-col text-slate-200 w-100 inline-block mt-44 md:mt-[260px] md:ml-[130px] ">
             <p className="text-4xl font- p-2">Hello ji, My name is</p>
             <h1 className="text-6xl font-bold p-2">Baljit Singh</h1>
             <p className=" text-4xl font-semibold p-2">And I'm a <span className="text-indigo-700" ref={el} /></p>
@@ -255,41 +265,21 @@ function App() {
           <p className="font-semibold text-xl -mt-5 bg-blue-400  w-[140px] flex justify-center"> who with me</p>
         </div>
 
-        <div    className=" bg-red-700 flex flex-row mt-24 overflow-scroll no-scrollbar ">
-        <Friends 
-        image = "https://thebaljitsingh.github.io/portfolio/gallery/vishal.jpg"
-        name = "Vishal Patidar"
-        bio = "From MP"
-        />
+        <div className=" ml-12 mr-12">     
+          <div className=" flex-row mt-24 scroll-smooth "> 
 
-        <Friends
-        image = "https://thebaljitsingh.github.io/portfolio/gallery/harshit.jpg"
-        name = "Harshit"
-        bio = ":)"
-        />
-        <Friends
-        image = "https://thebaljitsingh.github.io/portfolio/gallery/arnava.jpg"
-        name="Arnava Tiwari"
-        bio = "Professor"
-        />
-        <Friends
-        image = "https://thebaljitsingh.github.io/portfolio/gallery/sumit.jpg"
-        name = "Sumit"
-        bio = ":)"
-        />
-        <Friends
-        image = "https://thebaljitsingh.github.io/portfolio/gallery/manas.jpg"
-        name = "Manas"
-        bio = ":)"
-        />
-{/* <p>abhi thora s abaki hai</p> */}
+          <div className="app ">
+          <HorizontalSlider items={items} />
+          </div>
+
+          </div>
 
         </div>
+        </div>
+        
 
 
-
-      </div>
-
+      {/* contact me section */}
       <div className=" bg-white w-full h-[80vh] ">
         <div className="flex flex-col items-center justify-center">
             <h1 className="text-4xl font-bold mt-8 ">Contact me</h1>
@@ -360,6 +350,5 @@ function App() {
   );
 }
 
+
 export default App;
-
-

@@ -1,20 +1,42 @@
-export default function Friends(props){
-    return(
-        <div>
-            <div className=" ml-12 flex flex-col items-center justify-center hover:bg-indigo-700 bg-gray-900 w-[395px] h-[250px] rounded-lg  hover:cursor-pointer " >
-                <div className="hover:border-white  ease-in-out  ">
-                <img className="w-32  rounded-[50%] border-4 border-indigo-700 hover:border-white" src={props.image} alt="" />
-                <div className="mt-5 text-center ">
-                    <p className="mt-1 font-bold text-2xl text-white">{props.name}</p>
-                    <p className="mt-2 font-medium text-white">{props.bio}</p>
+const Friends = [
+    {
+        id: 1,
+        name: "Vishal Patidar",
+        image: "https://thebaljitsingh.github.io/portfolio/gallery/vishal.jpg",
+        bio: "From MP"
+    },
+    {
+        id:2,
+        name: "Harshit",
+        image: "https://thebaljitsingh.github.io/portfolio/gallery/harshit.jpg",
+        bio: ":)"
+    },
+    {
+        id:3,
+        name: "Arnava Tiwari",
+        image: "https://thebaljitsingh.github.io/portfolio/gallery/arnava.jpg",
+        bio: "Professor"
 
-                </div>
+    },
+    {
+        id:4,
+        name: "Manas Patidar",
+        image: "https://thebaljitsingh.github.io/portfolio/gallery/manas.jpg",
+        bio: "Pro Programmer"
+    },
+    {
+        id: 5,
+        name: "Sumit Pater",
+        image:"https://thebaljitsingh.github.io/portfolio/gallery/sumit.jpg",
+        bio:":)"
+    },
+    {
+        id:6,
+        name:"baljit",
+        image:"https://www.w3schools.com/images/img_spaces_up_generic_300.png",
+        bio: "this is demo"
+    }
 
-                </div>
-               
-              
+]
 
-            </div>
-        </div>
-    )
-}
+export default Friends;
