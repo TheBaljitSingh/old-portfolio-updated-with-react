@@ -2,6 +2,23 @@
 @import "~slick-carousel/slick/slick-theme.css";
 
 body{
+    max-width: 100%;
     margin: 0;
     padding: 0;
+    
 }
+.menu-btn {
+    @apply text-[#0000] overflow-hidden transition-[0.3s];
+    --h: 1.2em;
+    /* the height */
+    linea-height: var(--h);
+    text-shadow: 0 var(--_t, var(--h)) #fff, 0 0 var(--_c, #000);
+    background: linear-gradient(#303F9F 0 0) bottom/100% var(--_d, 0) no-repeat;
+    margin-top: 2.5rem;
+    margin-bottom: 2.5rem;
+  }
+  .menu-btn:hover {
+    --_d: 100%;
+    --_t: 0;
+    --_c: #0000;
+  }
