@@ -5,7 +5,7 @@ const HorizontalSlider = ({ items }) => {
   const settings = {
     infinite: true,
     speed: 500,
-    slidesToShow: 2, // Number of visible slides at a time
+    slidesToShow: 1, // Number of visible slides at a time
     slidesToScroll: 1,
     arrows: true,
     dots:true

@@ -246,7 +246,7 @@ function App() {
       </div>
 
             {/* my friend section */}
-      <div className="w-full h-[80vh] hidden bg-blue-400">
+      <div className="w-full h-[80vh]  bg-blue-400">
 
       <div className="flex flex-col items-center justify-center">
           <h1 className="text-4xl font-bold mt-8">My College Friends</h1>
