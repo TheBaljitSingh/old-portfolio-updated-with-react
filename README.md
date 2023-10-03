@@ -1,10 +1,13 @@
-This website include ReactJS, Tailwind...
 # Demo
 https://thebaljitsingh-portfolio-v2.netlify.app/
 
 # Baljit Singh's Portfolio Website
 
 Welcome to my personal portfolio website! This website showcases my projects, skills, and experience. You can access the live website [here](https://thebaljitsingh-portfolio-v2.netlify.app/).
+
+# Tech Stack
+- React
+- Tailwind
 
 ## Table of Contents
 - [Introduction](#introduction)
