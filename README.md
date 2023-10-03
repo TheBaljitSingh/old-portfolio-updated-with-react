@@ -5,6 +5,8 @@ https://thebaljitsingh-portfolio-v2.netlify.app/
 
 Welcome to my personal portfolio website! This website showcases my projects, skills, and experience. You can access the live website [here](https://thebaljitsingh-portfolio-v2.netlify.app/).
 
+https://github.com/TheBaljitSingh/portfolio-v2/assets/46133112/ee203d07-79a6-419a-ae41-b96e011f1b90
+
 # Tech Stack
 - React
 - Tailwind
