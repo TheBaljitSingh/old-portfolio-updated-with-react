@@ -30,10 +30,10 @@ This website serves as my online portfolio, where I showcase my skills, projects
 1. Clone this repository to your local machine:
 2. Navigate to the project folder:
 
-3. Open the `index.html` file in your web browser to view the website locally.
+3. Open the `app.js` file in your web browser to view the website locally.
 
 4. Customize the content:
-- Edit the `index.html` file to update project details, skills, and personal information.
+- Edit the `app.js` file to update project details, skills, and personal information.
 - Replace the images in the `img/` directory with your own.
 - Modify the CSS styles in the `css/` directory to match your preferred design.
 
