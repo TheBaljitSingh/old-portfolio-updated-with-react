@@ -1,5 +1,4 @@
-import { useEffect, useRef, useState } from "react";
-import { useDrag } from 'react-dnd';
+import { useEffect, useRef } from "react";
 import './App.css';
 import Typed from "typed.js";
 import Friends from "./Friends";
@@ -277,11 +276,11 @@ function App() {
         </div>
 
         <div className="flex  flex-col">
-          <div className="md:ml-44 ml-24 mt-12">
+          <div className="md:ml-44 ml-10 mt-12">
             <h2 className="font-bold text-2xl ">Get in Touch</h2>
             <p className="text-xl font-normal mt-2">for any query or support so please reach out me drop me messege</p>
           </div>
-            <div className=" mt-6 md:ml-44 ml-24 space-y-4 ">
+            <div className=" mt-6 md:ml-44 ml-10 space-y-4 ">
               <div className="flex flex-row space-x-8 ">
                 <div className="flex items-center">
                 <FaUser size={30}/>
