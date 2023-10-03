@@ -49,13 +49,9 @@ This website serves as my online portfolio, where I showcase my skills, projects
 - HTML
 - Tailwind CSS
 - ReactJS (optional, if you have dynamic content)
-- 
+ 
 ## Contributing
 
 If you'd like to contribute to this project, feel free to open an issue or submit a pull request. Your contributions are welcome and appreciated.
-
-## License
-
-This project is open-source and available under the [MIT License](LICENSE).
 
 
